@@ -4,9 +4,12 @@
 </head>
 
 <body>
+	{{> loginButtons}}
 	{{> lists}}
 	{{> chats}}
-	{{> slides}}
+	{{#if currentUser}}
+		{{> slides}}
+	{{/if}}
 	{{> reveal}}
 </body>
 
@@ -19,17 +22,20 @@
 
  -->
  <template name='chats'>
- <button id='chatBtn'>Qlist</button>
+ <button type='button' class='btn btn-default btn-lg' id='chatBtn'>Qlist</button>
  <div id="chatArea">
 	<form id="chatForm">
 		<label for="chat">Chat : </label>
-		<input type="text" placeholer="enter some comments..." id="chat"/>
-		<button id="send" type="submit">send</button>
+		<input type="text"  class="form-control" placeholer="enter some comments..." id="chat"/>
+		<button class='btn btn-default' id="send" type="submit">send</button>
 	</form>
-	<ul class="list-unstyled">
+	<ul class="list-group">
 		{{#with Pointer}}
 		{{#each chats}}
-			<li class="chat">{{message}}</li>
+			<li class="chat list-group-item">
+				<span class="badge">14</span>
+				{{message}}
+			</li>
 		{{/each}}
 		{{/with}}
 	</ul>
@@ -37,17 +43,24 @@
 </template>
 
 <template name='lists'>
-	<div id='lists'>
+
+
+<div class="btn-group" id='lists'>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Class List <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
 		{{#each lists}}
-			<a class="list-name {{slideId}}">{{slideId}}</a>
+    <li><a class="list-name" href="#">{{slideId}}</a></li>
 		{{/each}}
-	</div>
+  </ul>
+</div>
 </template>
 
 <template name="slides">
 <div id='slidesmenu'>
-  <input type="text" value="METEOR" id="slideId"/>
-  <input type="button" value="ADD CLASS" id="class"/>
+  <input type="text"  class="form-control" placeholer='enter class name' id="slideId"/>
+  <input type="button" class='btn btn-default' value="ADD CLASS" id="class"/>
   <h1 id="slide_num">{{pagenum}}</h1>
 </div>
 </template>

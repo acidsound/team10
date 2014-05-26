@@ -2,13 +2,30 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "reveal-js": {}
+      "reveal-js": {},
+      "bootstrap-3": {},
+      "iron-router": {}
     },
     "packages": {
       "reveal-js": {
         "git": "https://github.com/neo-technologies/meteor-reveal-js.git",
-        "tag": "v1.0.1",
-        "commit": "b4539e93ab03ddf01a9e6a35950b7a9d123b6cda"
+        "tag": "v2.6.2",
+        "commit": "66ca194e49e3c48fe7d4a62ac89c7ed0d6e0814a"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }
