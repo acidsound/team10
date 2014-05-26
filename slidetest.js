@@ -41,6 +41,7 @@ if (Meteor.isServer) {
 if (Meteor.isClient) {
   Meteor.startup( function () {
     $('#reveal-math').hide();
+  $("#chatArea").hide();
    Reveal.initialize({slideNumber: true}); 
    Reveal.configure({
     keyboard: {
@@ -115,9 +116,15 @@ Template.slides.helpers({
           $("#chat").focus();
         }
       });
+    },
+    'click #chatBtn' : function () {
+      $("#chatArea").toggle();
     }
   });
+
   $(".list-name").click(function(){
     Template.slides.register($(".list-name").text());
-  })
+  });
+
 }
+

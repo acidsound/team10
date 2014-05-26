@@ -1,13 +1,13 @@
 
 <head>
-  <title>slidetest</title>
+	<title>slidetest</title>
 </head>
 
 <body>
 	{{> lists}}
-  {{> slides}}
-  {{> chats}}
-  {{> reveal}}
+	{{> chats}}
+	{{> slides}}
+	{{> reveal}}
 </body>
 
 <!-- Pointer
@@ -19,11 +19,12 @@
 
  -->
  <template name='chats'>
+ <button id='chatBtn'>Qlist</button>
  <div id="chatArea">
-	 <form id="chatForm">
-	 	<label for="chat">Chat : </label>
-	 	<input type="text" placeholer="enter some comments..." id="chat"/>
-	 	<button id="send" type="submit">send</button>
+	<form id="chatForm">
+		<label for="chat">Chat : </label>
+		<input type="text" placeholer="enter some comments..." id="chat"/>
+		<button id="send" type="submit">send</button>
 	</form>
 	<ul class="list-unstyled">
 		{{#with Pointer}}

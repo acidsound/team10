@@ -18,7 +18,6 @@ input#chat {
 }
 
 div#chatArea {
-	position:fixed;
 	height:100%;
 	width:200px;
 	top:0px;
