@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "reveal-js": {}
+    },
+    "packages": {
+      "reveal-js": {
+        "git": "https://github.com/neo-technologies/meteor-reveal-js.git",
+        "tag": "v1.0.1",
+        "commit": "b4539e93ab03ddf01a9e6a35950b7a9d123b6cda"
+      }
+    }
+  }
+}

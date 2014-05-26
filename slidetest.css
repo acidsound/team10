@@ -1,0 +1,27 @@
+@import "packages/reveal-js/reveal.js/css/theme/default.css";
+
+div#chatArea {
+	width: 100%;
+	z-index: 2;
+}
+
+body {
+	color: white;
+}
+
+div#chatArea li {
+	color: white;
+}
+
+input#chat {
+	width: 80%;
+}
+
+div#chatArea {
+	position:fixed;
+	height:100%;
+	width:200px;
+	top:0px;
+	left:-200px;
+	background:#f3f3f3;
+}
