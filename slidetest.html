@@ -32,8 +32,8 @@
 	<ul class="list-group">
 		{{#with Pointer}}
 		{{#each chats}}
-			<li class="chat list-group-item">
-				<span class="badge">14</span>
+			<li class="chat list-group-item" style="color: black;">
+				<span class="badge">{{currpage}}</span>
 				{{message}}
 			</li>
 		{{/each}}
@@ -43,8 +43,6 @@
 </template>
 
 <template name='lists'>
-
-
 <div class="btn-group" id='lists'>
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
     Class List <span class="caret"></span>
