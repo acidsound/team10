@@ -7,6 +7,5 @@ standard-app-packages
 http
 reveal-js
 bootstrap-3
-iron-router
 accounts-password
 accounts-ui

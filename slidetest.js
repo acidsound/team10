@@ -20,14 +20,7 @@ Meteor.methods({
     });
   }
 })
-/*
-<Pointer>
-  > slideId
-  > pagenum
-  > chats
-    > message
 
-*/
 if (Meteor.isServer) {
   Meteor.startup(function () {
     console.log("server initiated");
@@ -41,7 +34,7 @@ if (Meteor.isServer) {
 
 if (Meteor.isClient) {
   Meteor.startup( function () {
-      Meteor.subscribe('lists');
+  Meteor.subscribe('lists');
     $('#reveal-math').hide();
   $("#chatArea").hide();
    Reveal.initialize({slideNumber: true}); 
@@ -126,13 +119,18 @@ Template.slides.helpers({
     Pointer : function () {
       return Pointer.findOne({slideId: Session.get('slideId')});
     },
+    pagenum : function () {
+      var currentPage = ( Template.lists.Pointer() && Template.lists.Pointer().pagenum != undefined ) ? Template.lists.Pointer().pagenum : 0;
+      if(Session.get('slideId') != undefined) Reveal.slide( currentPage, 0, 0 );
+      return currentPage;
+    },
     register : function (slideId_) {
         Session.set('slideId', slideId_);
         Meteor.call('setSlideId', slideId_ );
         $("#slide_name").text(slideId_);
         var currentPage = ( Template.lists.Pointer() && Template.lists.Pointer().pagenum != undefined ) ? Template.lists.Pointer().pagenum : 0;
         Reveal.slide( currentPage, 0, 0 );
-        $('#slidesmenu').hide();
+        // $('#slidesmenu').hide();
         $('#reveal-math').show();
 
     }
@@ -144,7 +142,7 @@ Template.slides.helpers({
       $("#slide_name").text(slideId_);
       var currentPage = ( Template.lists.Pointer() && Template.lists.Pointer().pagenum != undefined ) ? Template.lists.Pointer().pagenum : 0;
       Reveal.slide( currentPage, 0, 0 );
-      $('#slidesmenu').hide();
+      // $('#slidesmenu').hide();
       $('#reveal-math').show();
     }
   });

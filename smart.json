@@ -1,7 +1,6 @@
 {
   "packages": {
     "reveal-js": {},
-    "bootstrap-3": {},
-    "iron-router": {}
+    "bootstrap-3": {}
   }
 }
