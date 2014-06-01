@@ -4,13 +4,15 @@
 </head>
 
 <body>
-	{{> loginButtons}}
-	{{> lists}}
-	{{> chats}}
-	{{#if currentUser}}
-		{{> slides}}
-	{{/if}}
-	{{> reveal}}
+  {{> reveal}}
+  <div id="overlay">
+    {{> loginButtons}}
+    {{> lists}}
+    {{> chats}}
+    {{#if currentUser}}
+      {{> slides}}
+    {{/if}}
+  </div>
 </body>
 
  <template name='chats'>

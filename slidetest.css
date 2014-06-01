@@ -1,26 +1,35 @@
 @import "packages/reveal-js/reveal.js/css/theme/default.css";
 
 div#chatArea {
-	width: 100%;
-	z-index: 2;
+  z-index: 2;
+  position: absolute;
+  height:100%;
+  width:200px;
+  top:150px;
+  left:0;
+  background:#f3f3f3;
 }
 
 body {
-	color: white;
+  color: white;
 }
 
 div#chatArea li {
-	color: white;
+  color: white;
 }
 
 input#chat {
-	width: 80%;
+  width: 80%;
 }
 
-div#chatArea {
-	height:100%;
-	width:200px;
-	top:0;
-	left:-200px;
-	background:#f3f3f3;
+div#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+div#reveal-math {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
