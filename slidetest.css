@@ -20,7 +20,7 @@ input#chat {
 div#chatArea {
 	height:100%;
 	width:200px;
-	top:0px;
+	top:0;
 	left:-200px;
 	background:#f3f3f3;
 }

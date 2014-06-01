@@ -19,7 +19,7 @@ Meteor.methods({
       }
     });
   }
-})
+});
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
@@ -134,7 +134,7 @@ Template.slides.helpers({
         $('#reveal-math').show();
 
     }
-  })
+  });
   Template.lists.events({
     'click .list-name' : function(){
       var slideId_ = $(".list-name").text();
